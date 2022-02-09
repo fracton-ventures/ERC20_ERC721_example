@@ -6,8 +6,10 @@ https://github.com/amanusk/hardhat-template
 Solidityのバージョンは0.8.9にアップグレードして使っています。
 
 ## 内容
-- TestToken.sol: ERC20トークン。テンプレートに入っていたものです。
-- Artwork.sol: ERC721トークン。こちらを使用しています: [Create an NFT smart contract with HardHat](https://learn.figment.io/tutorials/create-nft-smart-contract-with-hardhat)
+### TestToken.sol
+ERC20トークン。テンプレートに入っていたものです。
+### Artwork.sol
+ERC721トークン。こちらを使用しています: [Create an NFT smart contract with HardHat](https://learn.figment.io/tutorials/create-nft-smart-contract-with-hardhat)
 
 ## Deploy
 ### ERC20
