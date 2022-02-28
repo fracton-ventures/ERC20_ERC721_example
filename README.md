@@ -1,15 +1,42 @@
-# Solidity Tutorial
-A repo for studying Solidity.
-This repo is made from the following hardhat + typescript template.
+# Solidity Tutorial No.1
+A sample code for studying Solidity.
+This sample code is made from the following hardhat + typescript template.
 https://github.com/amanusk/hardhat-template
-
-The solidity version is updated to 0.8.9 from the original version 0.6.*. 
 
 ## Contents
 ### TestToken.sol
 ERC20 token contract. This is included in the original template.
 ### Artwork.sol
 ERC721 token contract. I picked up the following tutorial code: [Create an NFT smart contract with HardHat](https://learn.figment.io/tutorials/create-nft-smart-contract-with-hardhat)
+
+
+## Preparation
+
+### Nodejs & npm or yarn
+To check nodejs version.
+`node -v`
+To check npm version.
+`npm -v`
+
+### Install packages
+Run following command to install packages
+`npm install`
+
+### Check whether packages are installed successfully.
+You can see hardhat options if they are installed successfully.
+`npx hardhat`
+
+
+## Test
+Run following command to compile smart contracts.
+`npx hardhat compile`
+
+Run following command to export type.
+`npx hardhat typechain`
+
+Run following command to execute tests.
+`npx hardhat test`
+
 
 ## Deploy
 ### ERC20

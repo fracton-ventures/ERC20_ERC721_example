@@ -1,8 +1,6 @@
 import { task } from "hardhat/config";
 
-import { config as dotenvConfig } from "dotenv";
-import { resolve } from "path";
-dotenvConfig({ path: resolve(__dirname, "./.env") });
+import env from "./secret.json"
 
 import { HardhatUserConfig } from "hardhat/types";
 import { NetworkUserConfig } from "hardhat/types";
@@ -25,13 +23,10 @@ const chainIds = {
   ropsten: 3,
 };
 
-const MNEMONIC = process.env.MNEMONIC || "";
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "";
-const INFURA_API_KEY = process.env.INFURA_API_KEY || "";
-const ALCHEMY_KEY = process.env.ALCHEMY_KEY || "";
+const MNEMONIC = env.mnemonic || "";
+const ETHERSCAN_API_KEY = env.providers.etherscanKey || "";
+const INFURA_API_KEY = env.providers.infuraKey || "";
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (args, hre) => {
   const accounts = await hre.ethers.getSigners();
 
@@ -53,9 +48,6 @@ function createTestnetConfig(network: keyof typeof chainIds): NetworkUserConfig 
     url,
   };
 }
-
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
@@ -90,7 +82,7 @@ const config: HardhatUserConfig = {
   },
   gasReporter: {
     currency: "USD",
-    gasPrice: 100,
+    gasPrice: 100
     // enabled: process.env.REPORT_GAS ? true : false,
   },
   typechain: {

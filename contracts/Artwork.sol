@@ -8,10 +8,7 @@ contract Artwork is ERC721 {
     uint256 public tokenCounter;
     mapping (uint256 => string) private _tokenURIs;
 
-    constructor(
-        string memory name,
-        string memory symbol
-    ) ERC721(name, symbol) {
+    constructor(string memory name, string memory symbol) ERC721(name, symbol) {
         tokenCounter = 0;
     }
 
@@ -26,7 +23,7 @@ contract Artwork is ERC721 {
         require(
             _exists(_tokenId),
             "ERC721Metadata: URI set of nonexistent token"
-        );  // Checks if the tokenId exists
+        );
         _tokenURIs[_tokenId] = _tokenURI;
     }
 

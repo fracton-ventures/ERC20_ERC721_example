@@ -5,6 +5,6 @@ cache
 artifacts
 factories
 
-.env
+secret.json
 
 typechain
