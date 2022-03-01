@@ -20,12 +20,30 @@ Run following command to install packages
 
 `npm install`
 
-### 3) Check whether Hardhat can be used.
+---
+
+## Create secret.json
+
+Create secret.json
+
+`touch secret.json`
+
+Edit secret.json like below.
+
+```
+{
+    "providers": {
+        "infuraKey": " {YOUR INFURAKEY} ",
+        "etherscanKey": " {YOUR ETHERSCANKEY} "
+    },
+    "mnemonic": " {YOUR MNEMONIC} "
+}
+```
+
+## Check whether Hardhat can be used.
 You can see hardhat options if they can be used.
 
 `npx hardhat`
-
----
 
 ## Test
 Run following command to compile smart contracts.
